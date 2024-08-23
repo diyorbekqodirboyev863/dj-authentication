@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+
+{% load socialaccount %}
+{% load i18n %}
+{% load crispy_forms_tags %}
+
+{% block content %}
+    <div class="col-md-6 offset-md-3 bg-dark text-light rounded p-5 mt-5">
+        <h2 class="text-center">Login</h2>
+        <form class="d-grid" method="POST">
+            {% csrf_token %}
+            {{ form|crispy }}
+            <button type="submit" class="btn btn-primary btn-block">Login</button>
+        </form>
+    </div>
+{% endblock %}

@@ -1,0 +1,28 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <h1>Welcome, {{ user.username }}</h1>
+    <h3>Authentications</h3>
+    <ul>
+        <li>
+            <b>Login</b>
+            <a href="{% url 'account_login' %}">Login</a>
+        </li>
+        <li>
+            <b>Logout</b>
+            <a href="{% url 'account_logout' %}">Logout</a>
+        </li>
+        <li>
+            <b>Register</b>
+            <a href="{% url 'account_signup' %}">Register</a>
+        </li>
+        <li>
+            <b>Password Reset</b>
+            <a href="{% url 'account_reset_password' %}">Reset Password</a>
+        </li>
+        <li>
+            <b>Password Change</b>
+            <a href="{% url 'account_change_password' %}">Change Password</a>
+        </li>
+    </ul>
+{% endblock %}
